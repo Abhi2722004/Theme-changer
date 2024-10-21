@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { ThemeProvider } from './context/ThemeContext'; // Import the ThemeProvider
+import ThemeToggle from './components/ThemeToggle'; // Import the ThemeToggle component
+import './App.css'; // Import CSS for styling
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div>
+        <h1>Hello <b>BrainyBeam</b> This is a Theme Changer button</h1>
+        <ThemeToggle />
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

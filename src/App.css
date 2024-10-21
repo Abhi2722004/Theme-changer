@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* General styles for the body */
+body {
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Set a default font */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Light theme styles */
+body.light {
+  background-color: white; /* Background color for light theme */
+  color: black; /* Text color for light theme */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Dark theme styles */
+body.dark {
+  background-color: black; /* Background color for dark theme */
+  color: white; /* Text color for dark theme */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style for the main container */
+div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Full viewport height */
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the button */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth button transition */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Light theme button style */
+body.light button {
+  background-color: #f0f0f0; /* Light background for button */
+  color: black; /* Dark text for button */
+}
+
+/* Dark theme button style */
+body.dark button {
+  background-color: #555; /* Dark background for button */
+  color: white; /* Light text for button */
+}
+
+/* Button hover effects */
+button:hover {
+  opacity: 0.8; /* Slightly transparent on hover */
 }
